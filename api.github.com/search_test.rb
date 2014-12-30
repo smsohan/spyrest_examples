@@ -9,6 +9,9 @@ describe "Github/search" do
   describe 'Search repositories' do
 
     it 'Suppose you want to search for popular Tetris repositories written in Assembly. Your query might look like this.' do
+
+      puts "self = #{self.inspect}"
+
       response = Github.get '/search/repositories?q=tetris+language:assembly&sort=stars&order=desc',
         verify: false,
         headers: {
