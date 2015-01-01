@@ -23,5 +23,17 @@ describe 'gists' do
     refute_nil response.body
   end
 
+  it "List a user's gists" do
+    response = Github.get '/users/smsohan/gists', @common_options
+    assert_equal 200, response.code
+    refute_nil response.body
+  end
+
+  it "List all public gists" do
+    response = Github.get '/gists/public', @common_options
+    assert_equal 200, response.code
+    refute_nil response.body
+  end
+
 end
 
