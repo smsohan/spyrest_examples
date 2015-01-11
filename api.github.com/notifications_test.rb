@@ -2,6 +2,10 @@ require_relative 'github'
 
 describe 'Notifications' do
 
+  before do
+    @common_options[:headers].merge!(Github.auth_header)
+  end
+
   it 'List all unread notifications for the current user, grouped by repository.' do
     response = Github.get '/notifications', @common_options
     assert_equal 200, response.code
