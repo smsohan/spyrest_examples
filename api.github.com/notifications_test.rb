@@ -27,4 +27,30 @@ describe 'Notifications' do
     assert_equal 200, response.code
   end
 
+  it 'Mark notifications as read in a repository' do
+    response = Github.put '/repos/smsohan/mvcmailer/notifications',
+      @common_options.merge(body: {}.to_json)
+    assert_equal 205, response.code
+  end
+
+  it 'View a single thread' do
+    response = Github.get '/notifications/threads/35582591', @common_options
+    assert_equal 200, response.code
+  end
+
+  it 'Get a Thread Subscription' do
+    response = Github.get '/notifications/threads/35582591/subscription', @common_options
+    assert_equal 200, response.code
+  end
+
+  it 'Set a Thread Subscription' do
+    response = Github.put '/notifications/threads/35582591/subscription', @common_options.merge(body: {}.to_json)
+    assert_equal 200, response.code
+  end
+
+  it 'Delete a Thread Subscription' do
+    response = Github.delete '/notifications/threads/35582591/subscription', @common_options.merge(body: {}.to_json)
+    assert_equal 204, response.code
+  end
+
 end
