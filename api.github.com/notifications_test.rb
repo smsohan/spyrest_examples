@@ -22,4 +22,9 @@ describe 'Notifications' do
     assert_equal 200, response.code
   end
 
+  it 'List your notifications in a repository' do
+    response = Github.get '/repos/smsohan/mvcmailer/notifications', @common_options
+    assert_equal 200, response.code
+  end
+
 end
