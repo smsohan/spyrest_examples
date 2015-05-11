@@ -1,0 +1,61 @@
+Matthew Johnston  11:57
+warmwaffles@gmail.com
+
+Matthew Johnston  11:54
+mjohnston@kissmetrics.com
+
+Sean Williamson 11:54
+swilliamson@kissmetrics.com
+
+Introduction myself, spyrest
+
+5
+Questions
+How many users?
+hundreds
+
+What is your ideal API doc? Why?
+Stripe/Heroku
+Locked down ->
+
+Are you using any tool? How?
+Swagger -> yml
+Skeleton -> web crawler -> options, works on rails
+
+10
+Demo
+
+25
+Feedback
+Rate it in the scale of 1-10. Why?
+> 6 (Security), 6 (Not sure)
+Would you use this if built in-house?
+> No
+Would you pay to use this?
+>
+Can I reach you again in the future?
+> Yes
+
+> Consume Swagger
+> JSON Schema ->
+
+> Validation reconstruction -> client and server
+
+35
+General feedback
+
+> Already willing to test, rule/range/bounds/required/defaults
+> Security -> Proxy
+> Upfront write-up
+> options -> get/post
+> upper bound on github pagination
+> standards/templates/magic key
+> phone/email
+
+Percy Hanna joined group chat.
+To list all available commands, enter "/?".
+Nate Klaiber joined group chat.
+Matthew Johnston joined group chat.
+Sean Williamson joined group chat
+
+> Examples -> generate

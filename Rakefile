@@ -7,3 +7,8 @@ Rake::TestTask.new do |t|
 end
 
 task :default => :test
+
+task :hit do
+  ENV['REAL'] = '1'
+  Rake::Task['test'].invoke
+end

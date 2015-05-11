@@ -1,7 +1,7 @@
 require_relative "../spec_helper"
 
 class Cakeside
-  include SpyRESTBase
+  include Spy
   base_uri 'https://www.cakeside.com'
 end
 

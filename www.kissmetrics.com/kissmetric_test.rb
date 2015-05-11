@@ -1,7 +1,7 @@
 require_relative '../spec_helper'
 
 class KissMetrics
-  include SpyRESTBase
+  include Spy
   base_uri 'https://api.kissmetrics.com'
 
   def self.auth_header
@@ -50,6 +50,11 @@ end
 describe 'Report' do
   it 'The reports endpoint returns a list of reports you are authorized to access. This includes all Reports across all Products.' do
     response = KissMetrics.get_with_auth '/core/reports?limit=20&offset=0', @common_options
+    refute_nil response.body
+  end
+
+  it 'The reports endpoint allows you to paginate' do
+    response = KissMetrics.get_with_auth '/core/reports?limit=20&offset=20', @common_options
     refute_nil response.body
   end
 end

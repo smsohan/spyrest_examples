@@ -18,12 +18,15 @@ class Minitest::Spec
   end
 end
 
-module SpyRESTBase
+module Spy
 
   def self.included(base)
     base.class_eval do
       include HTTParty
       host, port = ENV['REAL'] ? ['spyrest.com', 9081] : ['localhost', 9080]
+
+
+      puts "XXX using proxy #{host} #{port}"
 
       http_proxy host, port
       follow_redirects true
